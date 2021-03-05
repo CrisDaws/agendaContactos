@@ -1,8 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-title> Agregar </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,6 +10,18 @@
       <ion-title size="large">Tab 1</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <p>Agregar Contacto</p>
+  <ion-item>
+    <ion-label position="floating">Nombre Completo</ion-label>
+    <ion-input [(ngModel)]="agendaService.nuevo.nombre" type="text"></ion-input>
+    <ion-label position="floating">Telefono</ion-label>
+    <ion-input [(ngModel)]="agendaService.nuevo.telefono" type="tel"></ion-input>
+    <ion-label position="floating">Email</ion-label>
+    <ion-input [(ngModel)]="agendaService.nuevo.email" type="email"></ion-input>
+    <ion-label position="floating">Notas</ion-label>
+    <ion-input [(ngModel)]="agendaService.nuevo.nota" type="text"></ion-input>
+  </ion-item>
+  <ion-button expand="block" (click)="agendaService.presentAlert()" (click)="agendaService.agregar()">
+    <ion-icon name="add-circle-outline"></ion-icon>
+  </ion-button>
 </ion-content>

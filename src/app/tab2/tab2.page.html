@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Consultar
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -12,6 +12,10 @@
       <ion-title size="large">Tab 2</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-card *ngFor="let persona of agendaService.personas">
+    <h5>{{persona.nombre}}</h5>
+    <h5>{{persona.telefono}}</h5>
+    <h5>{{persona.email}}</h5>
+    <h5>{{persona.nota}}</h5>
+  </ion-card>
 </ion-content>

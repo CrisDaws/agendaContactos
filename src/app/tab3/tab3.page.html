@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      Eliminar
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,5 +13,7 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-button color="danger" expand="block" (click)="agendaService.presentAlertConfirm()" (click)="agendaService.eliminar()">
+    <ion-icon name="trash-outline"></ion-icon>
+  </ion-button>
 </ion-content>
